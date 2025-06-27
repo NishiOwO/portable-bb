@@ -41,6 +41,10 @@
 #define mikbannerdriver \
 " - Sun/Solaris driver by Valtteri Vuorikoski <vuori@sci.fi>\n"
 
+#elif defined(MA)
+#define mikbannerdriver \
+" - Miniaudio driver by Nishi <nishi@nishi.boats>\n"
+
 #elif defined(SOLARIS)
 #define mikbannerdriver \
 " - Sun/Solaris driver by Valtteri Vuorikoski <vuori@sci.fi>\n"
@@ -495,6 +499,7 @@ extern DRIVER drv_awe;		/* experimental SB-AWE driver */
 extern DRIVER drv_vox;		/* linux voxware driver */
 extern DRIVER drv_AF;		/* Dec Alpha AudioFile driver */
 extern DRIVER drv_sun;		/* Sun driver */
+extern DRIVER drv_alsa;		/* ALSA driver */
 extern DRIVER drv_os2;		/* Os2 driver */
 extern DRIVER drv_hp;		/* HP-UX /dev/audio driver */
 extern DRIVER drv_aix;		/* AIX audio-device driver */

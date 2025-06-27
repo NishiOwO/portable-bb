@@ -70,6 +70,8 @@ int main(int argc, char *argv[])
 
 #ifdef SUN
     MD_RegisterDriver(&drv_sun);
+#elif defined(ALSA)
+    MD_RegisterDriver(&drv_alsa);
 #elif defined(SOLARIS)
     MD_RegisterDriver(&drv_sun);
 #elif defined(__alpha)
