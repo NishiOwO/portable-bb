@@ -25,6 +25,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/time.h>
+#ifdef _WIN32
+#include <winsock2.h>
+#endif
 #include "mikmod.h"
 
 static UNIMOD *mf;

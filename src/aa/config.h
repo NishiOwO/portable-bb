@@ -4,7 +4,7 @@
 /* #undef X11_DRIVER */
 #define SLANG_DRIVER 1
 /* #undef LINUX_DRIVER */
-/* #undef CURSES_KBDDRIVER */
+#define CURSES_KBDDRIVER 1
 /* #undef X11_KBDDRIVER */
 #define SLANG_KBDDRIVER 1
 /* #undef LINUX_KBDDRIVER */
@@ -18,6 +18,15 @@
 /* #undef USE_CURSES */
 #define USE_NCURSES 1
 /* #undef USE_SYSV_CURSES */
+
+#ifdef _WIN32
+#undef CURSES_DRIVER
+#undef SLANG_DRIVER
+#undef SLANG_KBDDRIVER
+#undef CURSES_KBDDRIVER
+#undef CURSES_MOUSEDRIVER
+#undef USE_NCURSES
+#endif
 
 /* Define to 1 if you have the 'curs_set' function. */
 #define HAVE_CURS_SET 1

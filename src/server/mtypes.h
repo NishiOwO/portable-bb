@@ -36,8 +36,12 @@ typedef uint8_t UBYTE;		/* has to be 1 byte unsigned */
 typedef int16_t SWORD;		/* has to be 2 bytes signed */
 typedef uint16_t UWORD;		/* has to be 2 bytes unsigned */
 typedef int32_t SLONG;		/* has to be 4 bytes signed */
+#ifdef _WIN32
+#include <windows.h>
+#else
 typedef uint32_t ULONG;		/* has to be 4 bytes unsigned */
 typedef uint8_t BOOL;		/* doesn't matter.. 0=FALSE, <>0 true */
+#endif
 
 #else
 

@@ -27,6 +27,9 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef _WIN32
+#include <winsock2.h>
+#endif
 #include "bb.h"
 
 static int soundin;
@@ -73,6 +76,7 @@ int load_song(char *name)
 
 static int start_sound(void)
 {
+#ifndef _WIN32
     pid_t pid;
     int mypipe[2];
     int mypipe2[2];
@@ -120,6 +124,10 @@ static int start_sound(void)
 
 	return EXIT_FAILURE;
     }
+#else
+    bbsound = 0;
+    return EXIT_SUCCESS;
+#endif
 }
 void play()
 {

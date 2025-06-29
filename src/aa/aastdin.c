@@ -5,6 +5,9 @@
 #include <setjmp.h>
 #include <sys/time.h>
 #include <sys/types.h>
+#ifdef _WIN32
+#include <winsock2.h>
+#endif
 #ifdef GPM_MOUSEDRIVER
 #include <gpm.h>
 #endif

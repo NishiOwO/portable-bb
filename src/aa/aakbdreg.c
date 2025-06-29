@@ -22,6 +22,9 @@ __AA_CONST struct aa_kbddriver * __AA_CONST aa_kbddrivers[] =
 #ifdef OS2_KBDDRIVER
     &kbd_os2_d,
 #endif
+#ifdef _WIN32
+    &kbd_win32_d,
+#endif
 #endif
     &kbd_stdin_d,
     NULL

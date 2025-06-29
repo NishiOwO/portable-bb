@@ -48,6 +48,9 @@
 #include <go32.h>
 #include <dpmi.h>
 #endif
+#ifdef _WIN32
+#include <winsock2.h>
+#endif
 #include "timers.h"
 #include "bb.h"
 #ifdef HAVE_UCLOCK
@@ -158,6 +161,10 @@ int inline tl_lookup_timer(tl_timer * t)
 }
 void tl_sleep(int time)
 {
+#ifdef _WIN32
+	Sleep(time / 1000);
+	return;
+#endif
 #ifdef POOL_SOUND
 #else
 #ifdef HAVE_USLEEP

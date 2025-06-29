@@ -22,6 +22,9 @@ __AA_CONST struct aa_driver * __AA_CONST aa_drivers[] =
 #ifdef OS2_DRIVER
     &os2vio_d,
 #endif
+#ifdef _WIN32
+    &win32_d,
+#endif
 #endif
     &stdout_d,
     &stderr_d,
