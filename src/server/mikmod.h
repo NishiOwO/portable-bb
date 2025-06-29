@@ -499,6 +499,7 @@ extern DRIVER drv_awe;		/* experimental SB-AWE driver */
 extern DRIVER drv_vox;		/* linux voxware driver */
 extern DRIVER drv_AF;		/* Dec Alpha AudioFile driver */
 extern DRIVER drv_sun;		/* Sun driver */
+extern DRIVER drv_ma;		/* Miniaudio driver */
 extern DRIVER drv_alsa;		/* ALSA driver */
 extern DRIVER drv_os2;		/* Os2 driver */
 extern DRIVER drv_hp;		/* HP-UX /dev/audio driver */
